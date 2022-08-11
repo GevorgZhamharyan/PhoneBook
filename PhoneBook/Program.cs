@@ -58,47 +58,43 @@ namespace PhoneBook
                 {
                     Console.WriteLine("There is no problem!"); 
                 }
-                Console.WriteLine(); 
+                Console.WriteLine();
 
-                count = 0;
+                count = 0; 
 
+            }
 
-
-
-                /* Console.Write("Please choose criteria: ");
-                int choice = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Please choose criteria: ");
+            int choice = Convert.ToInt32(Console.ReadLine());
 
                 // case 1: --> name
                 // case 2: --> surname
                 // case 3: --> phoneNumberCode 
 
 
-                foreach (var item in pb)
+            foreach (var item in pb)
+            {
+                switch (choice)
                 {
-                    switch (choice)
-                    {
-                        case 1:
-                            Console.WriteLine(item.name);
-                            break;
+                    case 1:
+                        Console.WriteLine(item.name);
+                        break;
 
-                        case 2:
-                            Console.WriteLine(item.surname);
-                            break;
+                    case 2:
+                        Console.WriteLine(item.surname);
+                        break;
 
-                        case 3:
-                            Console.WriteLine(item.phoneNumber.ToString().Substring(0,3)); 
-                            break;
+                    case 3:
+                        Console.WriteLine(item.phoneNumber.ToString().Substring(0,3)); 
+                        break;
 
-                        default:
-                            Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine("Wrong Input Value!!!Please try again...");
-                            Console.ForegroundColor = ConsoleColor.White;
-                            break; 
-                    }
-                } */  
-
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Wrong Input Value!!!Please try again...");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        break; 
+                }
             }
-
         }
     }
 }
