@@ -26,7 +26,7 @@ namespace PhoneBook
 
             
 
-            Console.WriteLine("\n");
+            Console.WriteLine("\n"); 
 
             int count = 0;
 
@@ -62,7 +62,6 @@ namespace PhoneBook
 
                 count = 0;
 
-                Console.WriteLine("\n\n");   
 
 
 

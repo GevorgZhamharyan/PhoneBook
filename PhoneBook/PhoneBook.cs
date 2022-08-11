@@ -6,13 +6,13 @@ namespace PhoneBook
 {
     public class PhoneBook
     {
-        public string name;
+        public string name { get; set; }
 
-        public string surname;
+        public string surname { get; set; }
 
-        public char separator;
+        public char separator { get; set; }
 
-        public int phoneNumber; 
+        public int phoneNumber { get; set; } 
 
         public PhoneBook()
         {
