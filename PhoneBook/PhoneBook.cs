@@ -7,8 +7,11 @@ namespace PhoneBook
     public class PhoneBook
     {
         public string name;
+
         public string surname;
+
         public char separator;
+
         public int phoneNumber; 
 
         public PhoneBook()

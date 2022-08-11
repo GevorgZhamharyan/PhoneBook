@@ -62,7 +62,7 @@ namespace PhoneBook
 
                 count = 0;
 
-                Console.WriteLine("\n");  
+                Console.WriteLine("\n\n");   
 
 
 
