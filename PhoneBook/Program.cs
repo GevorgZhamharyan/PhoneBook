@@ -58,7 +58,9 @@ namespace PhoneBook
                 }
                 Console.WriteLine(); 
 
-                count = 0; 
+                count = 0;
+
+                Console.WriteLine(); 
             } 
         }
     }
