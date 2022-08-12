@@ -103,7 +103,7 @@ namespace PhoneBook
 
 
 
-            Console.Write("\nPlease choose an ordering to sort: \"1 for Ascending\" or \"2 for Descending\": "); 
+            Console.Write("\nPlease choose an ordering to sort: "); 
             int choose = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(); 
 
@@ -141,7 +141,7 @@ namespace PhoneBook
                         Console.WriteLine("Wrong Input Value!!!\nPlease try again..."); 
                         Console.ForegroundColor = ConsoleColor.White; 
                         break; 
-                }
+                } 
             }
         }
         public static int ASC(int num)
