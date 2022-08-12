@@ -1,5 +1,6 @@
 ﻿using System;
-using System.IO; 
+using System.IO;
+using System.Linq;
 
 namespace PhoneBook
 {
@@ -64,8 +65,12 @@ namespace PhoneBook
 
             }
 
+
+
+
             Console.Write("Please choose criteria: ");
             int choice = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(); 
 
                 // case 1: --> name
                 // case 2: --> surname
@@ -81,7 +86,7 @@ namespace PhoneBook
                         break;
 
                     case 2:
-                        Console.WriteLine(item.surname);
+                        Console.WriteLine(item.surname); 
                         break;
 
                     case 3:
@@ -95,6 +100,59 @@ namespace PhoneBook
                         break; 
                 }
             }
+
+
+
+
+            Console.Write("\nPlease choose an ordering to sort: \"1 for Ascending\" or \"2 for Descending\": "); 
+            int choose = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(); 
+
+            // case 1: --> Ascending Order for numbers:
+            // case 2: --> Descending Order for numbers:
+            // case 3: --> Ascending Order for strings: (name)  
+            // case 4: --> Descending Order for strings: (name) 
+
+            for (int i = 0; i < pb.Length; i++)
+            {
+
+                switch (choose)
+                {
+                    case 1:
+                        Console.WriteLine("Ascending Order: " + ASC(pb[i].phoneNumber)); 
+                        break;
+
+                    case 2:
+                        Console.WriteLine("Descending Order: " + DESC(pb[i].phoneNumber)); 
+                        break;
+
+
+                    case 3:
+                        string str1 = String.Join("", pb[i].name.OrderBy(x => x)); 
+                        Console.WriteLine(str1); 
+                        break;
+
+                    case 4:
+                        string str2 = String.Join("", pb[i].name.OrderByDescending(x => x));
+                        Console.WriteLine(str2); 
+                        break; 
+
+                    default:
+                        Console.ForegroundColor = ConsoleColor.Red; 
+                        Console.WriteLine("Wrong Input Value!!!\nPlease try again..."); 
+                        Console.ForegroundColor = ConsoleColor.White; 
+                        break; 
+                }
+            }
         }
+        public static int ASC(int num)
+        {
+            return Convert.ToInt32(String.Concat(num.ToString().OrderBy(x => x)));
+        }
+        public static int DESC(int num)
+        {
+            return Convert.ToInt32(String.Concat(num.ToString().OrderByDescending(x => x)));
+        }
+
     }
 }
