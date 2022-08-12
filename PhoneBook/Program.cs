@@ -25,7 +25,6 @@ namespace PhoneBook
                 Console.WriteLine(read); 
             }
 
-            
 
             Console.WriteLine("\n"); 
 
